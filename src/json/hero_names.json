@@ -161,6 +161,13 @@
     "alterphoto": "https://marvelcdb.com/bundles/cards/10001b.png"
   },
   {
+    "code": "56029a",
+    "heroname": "Hulkling",
+    "alter_ego": "Teddy Altman",
+    "herophoto": "https://marvelcdb.com/bundles/cards/56029a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/56029b.png"
+  },
+  {
     "code": "46001a",
     "heroname": "Iceman",
     "alter_ego": "Bobby Drake",
@@ -369,6 +376,13 @@
     "alter_ego": "Odinson",
     "herophoto": "https://marvelcdb.com/bundles/cards/06001a.png",
     "alterphoto": "https://marvelcdb.com/bundles/cards/06001b.png"
+  },
+  {
+    "code": "56001a",
+    "heroname": "Tigra",
+    "alter_ego": "Greer Nelson",
+    "herophoto": "https://marvelcdb.com/bundles/cards/56001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/56001b.png"
   },
   {
     "code": "25001a",

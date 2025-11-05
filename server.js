@@ -181,7 +181,7 @@ app.listen(3000, function() {
 
 // updatePackData(pool);
 
-// updateCardData(pool, "silk"); 
+// updateCardData(pool, "cw");
 
 // also will have to manually insert new heroes into hero_names.json (probably the only JSON we're keeping)
 // before running this file and separately running json/photo.py
