@@ -22,13 +22,25 @@ On the "staples" page, you can also choose an aspect to find the most popularly 
 
 ## To-Do / Wishlist
 
+#### Heroes at a glance
+Once a hero is chosen, display sample stats for decks/aspect by the time period. That way users don't have to make four queries to find the most popular aspect for that hero
+
+
 #### Clickable modals of generated cards to read text and see the list of packs that card comes from
+Or a toggle to show text instead of image - more accessible that way
 
-#### Reverse Synergy Card Lookup
 
-A reverse synergy lookup would be nice and would require/entail the following:
+#### Individual Card Search Bar
+A search bar to be able to select individual aspect cards. Could enable the following:
+##### Reverse Synergy Card Lookup
+User selects an individual aspect card, we find the most popular heroes that run that card
+##### Aspect Card Synergy Spotlight
+From the selected aspect, we run synergy math as if it's the hero to find the cards that are most commonly run with it.
+(For Basic cards, maybe it's worth running the query separately for each aspect)
 
-Need a search bar to be able to select a particular card
 
-With that card in mind, we find the most popular heroes that run that card
-From there, we even run synergy math on that card to find the cards that are most commonly run with it.
+#### Inclusion/Exclusion of "Indicator Cards"
+Prerequisite: Individual Card Search Bar
+Some hero synergies are skewed due to a subset of decks going for a specific narrow theme that warps the rest of the deckbuilding process.
+Consider such cards as "Strength in Diversity" or "Earth's Mightiest Heroes".
+It would be nice to be able to filter for or against individual cards and the decks that run them.

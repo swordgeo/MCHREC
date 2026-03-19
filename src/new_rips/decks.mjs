@@ -85,7 +85,7 @@ export async function ripDeckData(pool) {
 
 
 //if it fails, we redo it
-async function ripDeckDataWithRetry(pool, retries = 3) {
+async function ripDeckDataWithRetry(pool, retries = 5) {
   while (retries--) {
     try {
       await ripDeckData(pool); // Your existing function as is
@@ -93,7 +93,7 @@ async function ripDeckDataWithRetry(pool, retries = 3) {
     } catch (err) {
       if (retries > 0 && (err.code === 'ECONNRESET' || err.code === 'PROTOCOL_CONNECTION_LOST')) {
         console.error('Error in ripDeckData, retrying...', err);
-        await delay(3000); // Wait for 3 seconds before retrying
+        await delay(60000); // Wait for 60 seconds before retrying
         continue;
       } else {
         console.error('Failed to execute ripDeckData after retries or unrecoverable error:', err);
@@ -104,10 +104,11 @@ async function ripDeckDataWithRetry(pool, retries = 3) {
 }
 
 
-// Call this function once per day to update the deck data
+// Call this function four times per day (every six hours) to update the deck data
+// We do it four times because sometimes MArvelCDB goes down for a few hours and we don't want to miss our pull.
 export function startRipDeckDataInterval(pool) {
   ripDeckDataWithRetry(pool);
-  setInterval(() => ripDeckDataWithRetry(pool), 24 * 60 * 60 * 1000);
+  setInterval(() => ripDeckDataWithRetry(pool), 6 * 60 * 60 * 1000);
 }
 
 

@@ -154,6 +154,13 @@
     "alterphoto": "https://marvelcdb.com/bundles/cards/04001b.png"
   },
   {
+    "code": "59001a",
+    "heroname": "Hercules",
+    "alter_ego": "Hercules",
+    "herophoto": "https://marvelcdb.com/bundles/cards/59001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/59001b.png"
+  },
+  {
     "code": "10001a",
     "heroname": "Hulk",
     "alter_ego": "Bruce Banner",
@@ -432,6 +439,13 @@
     "alter_ego": "Logan",
     "herophoto": "https://marvelcdb.com/bundles/cards/35001a.png",
     "alterphoto": "https://marvelcdb.com/bundles/cards/35001b.png"
+  },
+  {
+    "code": "58001a",
+    "heroname": "Wonder Man",
+    "alter_ego": "Simon Williams",
+    "herophoto": "https://marvelcdb.com/bundles/cards/58001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/58001b.png"
   },
   {
     "code": "43001a",
