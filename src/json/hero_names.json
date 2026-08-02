@@ -84,6 +84,13 @@
     "alterphoto": "https://marvelcdb.com/bundles/cards/33001b.png"
   },
   {
+    "code": "60001a",
+    "heroname": "Daredevil",
+    "alter_ego": "Matt Murdock",
+    "herophoto": "https://marvelcdb.com/bundles/cards/60001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/60001b.png"
+  },
+  {
     "code": "44001a",
     "heroname": "Deadpool",
     "alter_ego": "Wade Wilson",
@@ -110,6 +117,13 @@
     "alter_ego": "Drax",
     "herophoto": "https://marvelcdb.com/bundles/cards/19001a.png",
     "alterphoto": "https://marvelcdb.com/bundles/cards/19001b.png"
+  },
+  {
+    "code": "60037a",
+    "heroname": "Echo",
+    "alter_ego": "Maya Lopez",
+    "herophoto": "https://marvelcdb.com/bundles/cards/60037a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/60037b.png"
   },
   {
     "code": "53001a",

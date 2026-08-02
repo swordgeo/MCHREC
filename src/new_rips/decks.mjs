@@ -6,7 +6,7 @@ import { queryWithRetry } from "../js/server-utils.js";
 //turn these on for day to day
 export async function ripDeckData(pool) {
   const twoDaysAgo = new Date();
-  twoDaysAgo.setDate(twoDaysAgo.getDate() - 2); // *this is the number to change to go back in time*
+  twoDaysAgo.setDate(twoDaysAgo.getDate() - 2 ); // *this is the number to change to go back in time*
   const formattedDate = twoDaysAgo.toISOString().slice(0, 10);
 
   const sql = `SELECT * FROM decks WHERE date_creation = ?`;
