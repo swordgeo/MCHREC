@@ -210,11 +210,25 @@
     "alterphoto": "https://marvelcdb.com/bundles/cards/29001b.png"
   },
   {
+    "code": "61001a",
+    "heroname": "Jessica Jones",
+    "alter_ego": "Jessica Jones",
+    "herophoto": "https://marvelcdb.com/bundles/cards/61001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/61001b.png"
+  },
+  {
     "code": "47001a",
     "heroname": "Jubilee",
     "alter_ego": "Jubilation Lee",
     "herophoto": "https://marvelcdb.com/bundles/cards/47001a.png",
     "alterphoto": "https://marvelcdb.com/bundles/cards/47001b.png"
+  },
+  {
+    "code": "62001a",
+    "heroname": "Luke Cage",
+    "alter_ego": "Luke Cage",
+    "herophoto": "https://marvelcdb.com/bundles/cards/62001a.png",
+    "alterphoto": "https://marvelcdb.com/bundles/cards/62001b.png"
   },
   {
     "code": "45030a",

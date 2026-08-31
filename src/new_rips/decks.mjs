@@ -36,20 +36,43 @@ export async function ripDeckData(pool) {
 
     for (const deck of decks) {
       const { date_creation, hero_code, slots, meta } = deck;
-      // console.log(deck);
+      console.log(deck);
 
         //pull aspect from meta, if possible
         let aspect = meta && meta !== '' ? JSON.parse(meta).aspect : null;
         if (hero_code == '21031a') {//Adam Warlock
           aspect = 'none';
         } else if (hero_code == '04031a') {//Spider-Woman
-          let aspect2 = meta && meta !== '' ? JSON.parse(meta).aspect2 : null;
-          if ((aspect == null ) || (aspect2 == null)) {
-            continue;
-          }
-          const aspectArr = [aspect, aspect2].sort();
-          aspect = aspectArr.join('/');
-        }
+            const aspect2 = meta && meta !== '' ? JSON.parse(meta).aspect2 : null;
+            if (aspect == null || aspect2 == null) {
+              continue;
+            }
+
+            // Canonical order is now by aspect_id, not alphabetical.
+            const [singles] = await queryWithRetry(
+              pool,
+              'SELECT aspect_id, aspect_name FROM aspects WHERE aspect_name IN (?, ?) ORDER BY aspect_id',
+              [aspect, aspect2]
+            );
+
+            if (singles.length !== 2) {
+              console.warn(`Skipping deck: bad aspect pair ${aspect}/${aspect2}`);
+              continue;
+            }
+
+              aspect = singles.map(row => row.aspect_name).join('/');
+            }
+        // This older alphabetical join worked - except for 48, which is protection/pool, which is cast here as pool/protection
+        // I could have instead renamed 48 to pool/protection, but this was a silly technique anyway
+        // Someday I will do away with this entirtely and devise a better Spider-Woman aspect convention
+
+        //   let aspect2 = meta && meta !== '' ? JSON.parse(meta).aspect2 : null;
+        //   if ((aspect == null ) || (aspect2 == null)) {
+        //     continue;
+        //   }
+        //   const aspectArr = [aspect, aspect2].sort();
+        //   aspect = aspectArr.join('/');
+        // }
         if (aspect == null) {
           continue;
         }
